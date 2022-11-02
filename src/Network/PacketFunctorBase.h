@@ -9,7 +9,7 @@ struct PacketFunctorBase
 {
     virtual ~PacketFunctorBase() = default;
 
-    virtual PacketQueueElemBase<Ctx> *operator()(X2::Serializer *serializer, Enum type) = 0;
-    virtual bool operator()(X2::Serializer *serializer, Enum type, Ctx *ctx) = 0;
+    virtual PacketQueueElemBase<Ctx> *operator()(serialize::Serializer *serializer, Enum type) = 0;
+    virtual bool operator()(serialize::Serializer *serializer, Enum type, Ctx *ctx) = 0;
 };
 } // namespace suv
